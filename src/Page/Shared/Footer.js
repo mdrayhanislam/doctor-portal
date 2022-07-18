@@ -34,6 +34,7 @@ const Footer = () => {
         <p>Copyright © 2022 - All right reserved</p>
         </div>
       </footer>
+      
     );
 };
 
