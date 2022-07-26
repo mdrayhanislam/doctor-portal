@@ -5,9 +5,12 @@ import About from './Page/About/About';
 import Appointment from './Page/Appointment/Appointment';
 import Home from './Page/Home/Home';
 import Login from './Page/Login/Login';
+import RequireAuth from './Page/Login/RequireAuth';
 import SingUp from './Page/Login/SingUp';
 import Footer from './Page/Shared/Footer';
 import Navbar from './Page/Shared/Navbar';
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -20,9 +23,14 @@ function App() {
   <Route path='/about' element={<About></About>}></Route>
   <Route path='/login' element={<Login></Login>}></Route>
   <Route path='/singup' element={<SingUp></SingUp>}></Route>
-  <Route path='/appointment' element={<Appointment></Appointment>}></Route>
+  <Route path='/appointment' element={
+    <RequireAuth>
+      <Appointment></Appointment>
+    </RequireAuth>
+  }></Route>
 </Routes>
 <Footer></Footer>
+<ToastContainer />
     </div>
 
     
