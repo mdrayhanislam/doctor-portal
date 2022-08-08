@@ -15,7 +15,7 @@ const Users = () => {
   // console.log('data', users)
     return (
         <div>
-            <h2 className="text-2xl">All Users: {users?.length}</h2>
+            <h2 className="text-2xl">All Users: {users.length}</h2>
             <div className="overflow-x-auto">
   <table className="table w-full">
 
@@ -30,7 +30,7 @@ const Users = () => {
     <tbody>
      
       {
-        users?.map(user => <UserRow
+        users.map(user => <UserRow
         key={user._id}
         user={user}
         refetch={refetch}
