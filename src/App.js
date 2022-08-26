@@ -19,6 +19,7 @@ import Users from './Page/Dashboard/Users';
 import AddDoctor from './Page/Dashboard/AddDoctor';
 import RequireAdmin from './Page/Login/RequireAdmin';
 import ManageDoctor from './Page/Dashboard/ManageDoctor';
+import Payment from './Page/Dashboard/Payment';
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
     <Route index element={<MyAppointments></MyAppointments>}></Route>
     <Route path='review' element={<MyReview></MyReview>}></Route>
     <Route path='history' element={<History></History>}></Route>
+    <Route path='payment/:id' element={<Payment></Payment>}></Route>
     <Route path='users' element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
     <Route path='addDoctor' element={<RequireAdmin><AddDoctor></AddDoctor></RequireAdmin>}></Route>
     <Route path='manageDoctor' element={<RequireAdmin><ManageDoctor></ManageDoctor></RequireAdmin>}></Route>
@@ -53,7 +55,6 @@ function App() {
 <ToastContainer />
     </div>
 
-    
   );
 }
 

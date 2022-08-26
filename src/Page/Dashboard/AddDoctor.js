@@ -51,6 +51,7 @@ const AddDoctor = () => {
                     navigate('/dashboard/manageDoctor')
                     toast.success('Doctor added successfully')
                     reset();
+                   
                 }
                 else{
                     toast.error('Failed to add the doctor');
